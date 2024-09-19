@@ -29,9 +29,17 @@ public class MasterPageFactory {
 	@FindBy(xpath = "(//*[text()='Services'])[3]")
 	private WebElement services;
 	
-	@FindBy(xpath ="//*[text()='Bottled Water Delivery']" )
+	@FindBy(xpath ="(//*[text()='Bottled Water Delivery'])[2]" ) // have to work on it
 	private WebElement bottledWater;
 	
+	//@FindBy(xpath = "//*[@class=' css-1uccc91-singleValue']")
+	@FindBy(xpath = "//*[@id='oldSelectMenu']")
+	private WebElement dropdown2;
+	
+	public WebElement getDropdown2() {
+		return dropdown2;
+	}
+
 	public WebElement getServices() {
 		return services;
 	}
